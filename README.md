@@ -60,7 +60,7 @@ Welcome to the repository for our ecommerce website built with the MERN stack (M
    Create a .env file in the root directory. Add the following environment variables:
     ```bash
     MONGO_URI=<your-mongodb-connection-string>
-    PORT=<your-server-port || 5000>
+    PORT=<your-server-port>
     JWT_SECRET=<your-jwt-secret>
     ```
 4. **Run the Development Server:**
