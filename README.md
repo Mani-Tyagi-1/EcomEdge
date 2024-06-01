@@ -1,6 +1,8 @@
 # MERN Ecommerce Website
 
-Welcome to the repository for our ecommerce website built with the MERN stack (MongoDB, Express.js, React, and Node.js). This project aims to create a full-featured ecommerce platform that provides a seamless shopping experience for users.
+***Welcome to the repository for our ecommerce website built with the MERN stack (MongoDB, Express.js, React, and Node.js). This project aims to create a full-featured ecommerce platform that provides a seamless shopping experience for users.***
+
+![Thumbnail](/thumb.png)
 
 **Features:**
 
@@ -32,7 +34,7 @@ Welcome to the repository for our ecommerce website built with the MERN stack (M
 │ ├── **_controllers/_** => API controller functions<br>
 │ ├── **_models/_** => Mongoose data models for MongoDB<br>
 │ ├── **_routes/_** => API routes<br>
-│ ├── **_middleware/_** => Middleware functions for authentication, authorization, etc.<br>
+│ ├── **_middlewares/_** => Middleware functions for authentication, authorization, etc.<br>
 │ ├── **_config/_** => Configuration files (database, etc.)<br>
 │ └── **_index.js_** => Server entry point<br>
 ├── **public/** => Static assets (images, fonts, etc.)<br>
@@ -64,9 +66,10 @@ Welcome to the repository for our ecommerce website built with the MERN stack (M
     JWT_SECRET=<your-jwt-secret>
     ```
 4. **Run the Development Server:**
+In the root directory of project run the command:
     ```bash
-    npm start
+    npm run dev
     or,
-    yarn start
+    yarn dev
     ```
-    This will start the server and typically open your browser to http://localhost:3000 (the default port may vary).
+    This will start the server and typically open your browser to http://localhost:5173 from the vite server (the default port may vary).
