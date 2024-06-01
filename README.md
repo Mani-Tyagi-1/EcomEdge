@@ -1,4 +1,4 @@
-# MERN Ecommerce Website
+# EcomEdge
 
 ***Welcome to the repository for our ecommerce website built with the MERN stack (MongoDB, Express.js, React, and Node.js). This project aims to create a full-featured ecommerce platform that provides a seamless shopping experience for users.***
 
