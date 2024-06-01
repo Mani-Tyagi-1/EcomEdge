@@ -1,6 +1,6 @@
-# MERN Ecommerce Website
+# EcomEdge
 
-***Welcome to the repository for our ecommerce website built with the MERN stack (MongoDB, Express.js, React, and Node.js). This project aims to create a full-featured ecommerce platform that provides a seamless shopping experience for users.***
+***Welcome to the repository for our ecommerce website (EcomEdge) built with the MERN stack (MongoDB, Express.js, React, and Node.js). This project aims to create a full-featured ecommerce platform that provides a seamless shopping experience for users.***
 
 ![Thumbnail](/thumb.png)
 
@@ -20,9 +20,9 @@
 
 -   **Responsive Design:** Adaptable layout for various devices (desktop, mobile, tablet).
 
-## Project Structure:
+## Project Structure of EcomEdge:
 
-**MERN-E-comm/**<br>
+**EcomEdge/**<br>
 ├── **frontend/** **_React frontend code_**<br>
 │ ├── **_src/_**<br>
 │ │ ├── _components/_ => Reusable UI components<br>
@@ -46,7 +46,7 @@
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/prashant-sagar-shakya/MERN-E-comm.git
+    git clone https://github.com/prashant-sagar-shakya/EcomEdge.git
     ```
 
 2. **Install Dependencies:**
