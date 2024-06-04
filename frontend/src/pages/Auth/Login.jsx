@@ -41,7 +41,7 @@ const Login = () => {
 
   return (
     <div>
-      <section className="pl-[10rem] flex flex-wrap">
+      <section className="pl-[10rem] flex ">
         <div className="mr-[4rem] mt-[5rem] ">
           <h1 className="text-2xl font-semibold mb-4 ">Sign In</h1>
 
@@ -84,7 +84,7 @@ const Login = () => {
                 className="bg-pink-500 text-white py-2 px-4 rounded-lg hover:bg-pink-600 focus:outline-none focus:ring-2 foucs:ring-pink-500 focus:ring-opacity-50"
               >
                 {isLoading ? (
-                  <Rings color="white" height={80} width={80} />
+                  <Rings color="white" height={7} width={20} />
                 ) : (
                   "Sign In"
                 )}
@@ -97,7 +97,7 @@ const Login = () => {
                     to={
                       redirect ? `/register?redirect=${redirect}` : "/register"
                     }
-                    className="text-pink-500 hover: underline"
+                    className="text-pink-500 hover:underline"
                   >
                     {" "}
                     Register
@@ -107,6 +107,11 @@ const Login = () => {
             </div>
           </form>
         </div>
+        <img
+          src="https://cdn.imgchest.com/files/k739cnw8mp7.png"
+          alt=""
+          className="h-[44rem] w-[48%] xl:block md:hidden sm:hidden rounded-lg"
+        />
       </section>
     </div>
   );
