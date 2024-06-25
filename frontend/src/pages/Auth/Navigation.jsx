@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import {
   AiOutlineHome,
@@ -12,42 +11,38 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./Navigation.css";
 import { useSelector, useDispatch } from "react-redux";
-import {useLogoutMutation} from "../../redux/api/usersApiSlice"
-import {logout} from "../../redux/features/auth/authSlice"
-
-
+import { useLogoutMutation } from "../../redux/api/usersApiSlice";
+import { logout } from "../../redux/features/auth/authSlice";
 
 const Navigation = () => {
-
-  const { userInfo } = useSelector(state => state.auth);
+  const { userInfo } = useSelector((state) => state.auth);
 
   const [dropdownOpen, setDropDownOpen] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
 
   const toggleDropdown = () => {
     setDropDownOpen(!dropdownOpen);
-  }
+  };
 
   const toggleSidebar = () => {
     setShowSidebar(!showSidebar);
-  }
+  };
 
   const closeSidebar = () => {
     setShowSidebar(false);
-  }
+  };
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const [logoutApiCall]  = useLogoutMutation();
+  const [logoutApiCall] = useLogoutMutation();
 
   const logoutHandler = async () => {
     try {
       await logoutApiCall().unwrap();
       dispatch(logout());
       navigate("/login");
-    }
-    catch (error) {
+    } catch (error) {
       console.log(error);
     }
   };
@@ -228,6 +223,6 @@ const Navigation = () => {
       )}
     </div>
   );
-}
+};
 
-export default Navigation
+export default Navigation;

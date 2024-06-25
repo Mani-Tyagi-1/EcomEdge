@@ -5,7 +5,7 @@ import "./index.css";
 import { Route, RouterProvider, createRoutesFromElements } from "react-router";
 import { createBrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-import store from "./redux/features/store";
+import store from "./redux/store.js";
 import PrivateRoute from "./components/PrivateRoute";
 
 // Auth
@@ -22,7 +22,7 @@ import ProductList from "./pages/Admin/ProductList";
 import AllProducts from "./pages/Admin/AllProducts";
 import ProductUpdate from "./pages/Admin/ProductUpdate";
 
-// import ProductDetails from "./pages/Products/ProductDetails.jsx";
+import ProductDetails from "./pages/Products/ProductDetails.jsx";
 
 import AdminDashboard from "./pages/Admin/AdminDashboard.jsx";
 
@@ -31,7 +31,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<App />}>
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      {/* <Route path="/product/:id" element={<ProductDetails />} /> */}
+      <Route path="/product/:id" element={<ProductDetails />} />
 
       <Route path="" element={<PrivateRoute />}>
         <Route path="/profile" element={<Profile />} />
