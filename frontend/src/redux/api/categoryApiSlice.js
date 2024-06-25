@@ -23,6 +23,7 @@ export const categoryApiSlice = apiSlice.injectEndpoints({
       query: (categoryId) => ({
         url: `${CATEGORY_URL}/${categoryId}`,
         method: "DELETE",
+        // body: categoryId,
       }),
     }),
 

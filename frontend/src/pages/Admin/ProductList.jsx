@@ -37,7 +37,6 @@ const ProductList = () => {
       productData.append("quantity", quantity);
       productData.append("brand", brand);
       productData.append("countInStock", stock);
-
       const { data } = await createProduct(productData);
 
       if (data.error) {
