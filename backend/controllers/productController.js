@@ -36,35 +36,30 @@ const updateProductDetails = asyncHandler(async (req, res) => {
     const { name, description, price, category, quantity, brand } = req.fields;
 
     // Validation
-    switch (true) {
-      case !name:
-        return res.json({ error: "Name is required" });
-      case !brand:
-        return res.json({ error: "Brand is required" });
-      case !description:
-        return res.json({ error: "Description is required" });
-      case !price:
-        return res.json({ error: "Price is required" });
-      case !category:
-        return res.json({ error: "Category is required" });
-      case !quantity:
-        return res.json({ error: "Quantity is required" });
+    if (!name || !brand || !description || !price || !category || !quantity) {
+      return res.json({
+        error:
+          "Please provide all required fields: name, brand, description, price, category, and quantity.",
+      });
     }
 
-    const product = await Product.findByIdAndUpdate(
-      req.params.id,
-      { ...req.fields },
-      { new: true }
+    const product = await Product.findOneAndUpdate(
+      { _id: req.params.id },
+      { $set: req.fields },
+      { new: true } // Return the updated product
     );
 
-    await product.save();
+    if (!product) {
+      return res.status(404).json({ error: "Product not found" });
+    }
 
     res.json(product);
   } catch (error) {
     console.error(error);
-    res.status(400).json(error.message);
+    res.status(500).json({ error: "Server Error" }); // Generic error message
   }
 });
+
 
 const removeProduct = asyncHandler(async (req, res) => {
   try {
